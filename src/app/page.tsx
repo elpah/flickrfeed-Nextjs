@@ -28,7 +28,7 @@ export default function Home() {
   return (
     !images || images.length === 0 ? (
       <div className="flex justify-center h-screen text-red-500 mt-12 text-lg md:text-xl lg:text-2xl">
-        No images found for keyword: '{keyword}'
+        No images found for keyword: {keyword}
       </div>
     ) : (
       <div className="flex flex-col min-h-screen">
