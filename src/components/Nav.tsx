@@ -1,7 +1,7 @@
 "use client";
 import { useState,useContext, useEffect, } from "react";
 import Image from "next/legacy/image";
-import logo from '../assets/images/elpahLogo.png'
+import logo from '../assets/elpahLogo.png'
 import { GlobalContext } from './context/GlobalContext';
 import {  useRouter, useSearchParams } from 'next/navigation'
 
@@ -12,7 +12,7 @@ export default function Nav() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setKeyword('')
+    setKeyword('');
     const keyword = e.currentTarget.search.value.trim();
     setKeyword(keyword);
     await router.push(`/?search=${keyword}`);

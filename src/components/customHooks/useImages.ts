@@ -3,7 +3,7 @@ import axios from "axios";
 import { GlobalContext } from "../context/GlobalContext";
 import { useContext } from "react";
 
-interface ImageData {
+interface IImageData {
   title: string;
   media: string;
 }
@@ -13,12 +13,10 @@ const useImages = () => {
 
   const fetchImages = () =>
     axios
-      .get<ImageData[]>("/api", {
+      .get<IImageData[]>("/api", {
         params: { keyword: keyword },
       })
-
       .then((res) => {
-        console.log(res.data);
         return res.data;
       });
 

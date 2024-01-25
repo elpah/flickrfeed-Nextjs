@@ -1,14 +1,12 @@
 "use client";
-import React, {  useEffect, useContext } from "react";
- import useImages from '../components/customHooks/useImages';
- import { GlobalContext } from "../components/context/GlobalContext";
-
 import Image from "next/image";
+import React, {  useEffect, useContext } from "react";
+import useImages from '../components/customHooks/useImages';
+import { GlobalContext } from "../components/context/GlobalContext";
 
-type Image={
-  title:string;
-  media:string;
-
+interface IImageData {
+  title: string;
+  media: string;
 }
 
 export default function Home() {
@@ -36,13 +34,14 @@ export default function Home() {
       <div className="flex flex-col min-h-screen">
         <div className="flex-grow p-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {images?.map((image:Image, key:string) => (
+            {images?.map((image:IImageData, key) => (
               <div key={key} className="relative w-full h-40 md:h-48 lg:h-56">
                 <Image
+                  fill={true}
                   src={image.media}
                   alt={image.title}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
-                  fill={true}
                 />
               </div>
             ))}
