@@ -4,13 +4,19 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
   const searchParams = req.nextUrl.searchParams;
   const keyword = searchParams.get("keyword");
-
+ 
+  let params;
+  keyword
+    ? (params = {
+        format: "json",
+        nojsoncallback: 1,
+        tags: keyword,
+      })
+    : (params = {
+        format: "json",
+        nojsoncallback: 1,
+      });
   try {
-    let params = {
-      format: "json",
-      nojsoncallback: 1,
-      tags: keyword ? keyword : "",
-    };
     const response = await axios.get(
       "https://www.flickr.com/services/feeds/photos_public.gne",
       { params }
