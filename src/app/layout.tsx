@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import TanstackProvider from "@/components/providers/TanstackProvider";
 import ContextProvider from "@/components/providers/ContextProvider";
 
- const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +19,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
     <TanstackProvider>
     <ContextProvider>
     <div className="min-h-screen flex flex-col">

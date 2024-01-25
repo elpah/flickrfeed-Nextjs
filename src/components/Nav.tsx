@@ -4,6 +4,8 @@ import Image from "next/legacy/image";
 import logo from '../assets/elpahLogo.png'
 import { GlobalContext } from './context/GlobalContext';
 import {  useRouter, useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
+
 
 export default function Nav() {
   const { keyword, setKeyword } = useContext(GlobalContext);
@@ -22,7 +24,8 @@ export default function Nav() {
       const key = searchParams.get('search')
       if(key)
      setKeyword(key);
-    },[])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]) 
 
   return (
     <header className="w-full p-4  border-solid border-gray-500 shadow-md">
@@ -32,6 +35,7 @@ export default function Nav() {
           height={80} width={80} 
           priority />
         </div>
+        
         <form onSubmit={handleSubmit}
           className="w-3/5  flex items-center justify-center"
           style={{
@@ -49,6 +53,7 @@ export default function Nav() {
             Search
           </button>
         </form>
+    
         <div className="hidden md:block w-1/10"></div>
       
       </nav>
