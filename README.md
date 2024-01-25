@@ -11,11 +11,11 @@ react queries for fetching data.
 
 2. Install dependencies 
    ```console
-  npm i
+   npm i
 
 3. Start the application
    ```console
-  npm run dev 
+   npm run dev 
 
 4. Open your browser and go to http://localhost:3000
 
