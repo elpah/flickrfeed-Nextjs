@@ -6,15 +6,15 @@ react queries for fetching data.
 **Getting Started**
 
 1. Clone the repository
-  ```console
+   ```console
     git clone git@github.com:elpah/elpachris-obeng.git
 
 2. Install dependencies 
-  ```console
+   ```console
   npm i
 
 3. Start the application
-  ```console
+   ```console
   npm run dev 
 
 4. Open your browser and go to http://localhost:3000
