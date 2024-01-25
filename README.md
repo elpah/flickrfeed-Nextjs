@@ -1,6 +1,6 @@
 **Flickr Feed Viewer and Search Web Application**
 
-A simple web application The application is built with TypeScript, NextJs API routes for backend,  Next JS for frontend and utilizes tailwind css for styling, and 
+A simple web application built with TypeScript, NextJs API routes for backend,  Next JS for frontend and utilizes tailwind css for styling, and 
 react queries for fetching data.
 
 **Getting Started**
