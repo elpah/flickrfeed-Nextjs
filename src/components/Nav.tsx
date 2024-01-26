@@ -4,8 +4,6 @@ import Image from "next/legacy/image";
 import logo from '../assets/elpahLogo.png'
 import { GlobalContext } from './context/GlobalContext';
 import {  useRouter, useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
-
 
 export default function Nav() {
   const { keyword, setKeyword } = useContext(GlobalContext);
