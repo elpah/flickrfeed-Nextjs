@@ -7,6 +7,6 @@ export interface IGlobalContext {
 }
 
 export const GlobalContext = createContext<IGlobalContext>({
-  keyword: "test",
+  keyword: "",
   setKeyword: (keyword) => {},
 });
